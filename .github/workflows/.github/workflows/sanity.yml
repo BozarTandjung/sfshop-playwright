@@ -1,0 +1,41 @@
+name: SFShop Playwright Sanity
+
+on:
+  schedule:
+    # 07:00 WIB = 00:00 UTC
+    - cron: '0 0 * * *'
+
+  workflow_dispatch:
+
+  push:
+    branches:
+      - master
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Sanity Test
+        run: npm test
+
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
