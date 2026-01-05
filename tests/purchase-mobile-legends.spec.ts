@@ -24,8 +24,8 @@ test('SFShop - Purchase Mobile Legends with XimpaySF', async ({ page }) => {
     console.log('✅ Mobile Legends link clicked');
     console.log(`📍 URL after ML click: ${page.url()}`);
     
-    await page.getByRole('img', { name: /mobile legend 5 diamonds/i }).click();
-    console.log('✅ 5 Diamonds product selected');
+    await page.getByRole('img', { name: /25\+3 diamonds/i }).click();
+    console.log('✅ 25+3 Diamonds product selected');
     console.log(`📍 URL after product selection: ${page.url()}`);
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';

@@ -134,8 +134,11 @@ for (const data of testData) {
     // Wait for Xendit checkout page
     await page.waitForURL(/checkout-staging\.xendit\.co/, { timeout: 45_000 });
     
-    // Simulate payment (using helper function with built-in error handling)
-    await simulatePayment(page);
+    // Simulate payment
+    const simulateBtn = page.getByTestId('simulate-button');
+    await expect(simulateBtn).toBeVisible({ timeout: 20_000 });
+    await simulateBtn.click({ force: true });
+    console.log('✅ Payment simulated');
 
     // Wait for order page and extract order ID
     await page.waitForURL(/\/order\//, { timeout: 60_000, waitUntil: 'domcontentloaded' });

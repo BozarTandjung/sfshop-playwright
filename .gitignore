@@ -9,3 +9,8 @@ node_modules/
 
 # Email configuration (contains sensitive credentials)
 email-config.json
+
+# Debug screenshots
+debug-*.png
+debug-*.jpg
+debug-*.jpeg
