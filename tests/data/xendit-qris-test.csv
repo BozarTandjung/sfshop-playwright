@@ -1,0 +1,8 @@
+testName,type,playerID,zoneID,email,phone,expectedError
+Valid Purchase - Xendit QRIS,positive,115383687,2584,test@mail.com,088110001000,
+Invalid Player ID,negative,abc123,2584,test@mail.com,088110001000,Player ID tidak valid
+Empty Zone ID,negative,115383687,,test@mail.com,088110001000,Zone ID wajib diisi
+Invalid Email Format,negative,115383687,2584,testmail.com,088110001000,Email tidak valid
+Empty Phone,negative,115383687,2584,test@mail.com,,Nomor HP wajib diisi
+Invalid Phone Format,negative,115383687,2584,test@mail.com,123,Format nomor tidak valid
+

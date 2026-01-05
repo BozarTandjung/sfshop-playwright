@@ -1,11 +1,11 @@
 name: SFShop Playwright Sanity
 
- on:
+on:
   push:
     branches: [ master ]
   workflow_dispatch:
- # schedule:
-  #  - cron: '0 0 * * *'   # 07:00 WIB (UTC+7)
+  schedule:
+  - cron: '0 0 * * 1-5'   # Senin–Jumat  07:00 WIB (UTC+7)
 
 jobs:
   sanity:

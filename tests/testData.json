@@ -1,0 +1,14 @@
+[
+    {
+        "testStep": "Navigate_To_Cms",
+        "testStepDesc": "Navigate to CMS login page",
+        "param1": "fajar.triantoro@smartfren.com",
+        "param2": "Smartfren123"
+    },
+    {
+        "testStep": "Login_Cms",
+        "testStepDesc": "Login with valid credentials",
+        "param1": "fajar.triantoro@smartfren.com",
+        "param2": "Smartfren123"
+    }
+]

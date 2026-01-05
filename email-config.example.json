@@ -1,0 +1,11 @@
+{
+  "gmail": {
+    "user": "your-email@gmail.com",
+    "appPassword": "your-app-password-here"
+  },
+  "recipients": [
+    "recipient@example.com"
+  ],
+  "sendAlways": true,
+  "sendOnFailuresOnly": false
+}
